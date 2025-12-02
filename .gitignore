@@ -1,0 +1,27 @@
+# Supabase Configuration (Contains API Keys)
+# IMPORTANT: Never commit this file with real API keys
+js/supabase-config.js
+
+# Node modules (if you add npm later)
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <title>Sign Up - Fitness Zone</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Fitness <span>Zone</span></a>
+        <div class='bx bx-menu' id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">Attendance</a></li>
+            <li><a href="index.html#Membership">Membership</a></li>
+            <li><a href="index.html#review">Review</a></li>
+        </ul>
+        <div class="top-btn">
+            <a href="signin.html" class="nav-btn">Sign In</a>
+        </div>
+    </header>
+
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-box">
+                <h2 class="auth-heading">Create <span>Account</span></h2>
+                <p class="auth-subtitle">Join Fitness Zone today!</p>
+
+                <form id="signupForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">
+                                <i class='bx bx-user'></i> First Name
+                            </label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Enter first name">
+                            <span class="error-message" id="firstNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">
+                                <i class='bx bx-user'></i> Last Name
+                            </label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Enter last name">
+                            <span class="error-message" id="lastNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            <i class='bx bx-envelope'></i> Email
+                        </label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">
+                            <i class='bx bx-phone'></i> Phone Number
+                        </label>
+                        <input type="tel" id="phone" name="phone" required placeholder="03xxxxxxxxx" pattern="[0-9]{11}" maxlength="11">
+                        <span class="error-message" id="phoneError"></span>
+                        <small class="form-hint">Enter 11 digit phone number (e.g., 03001234567)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">
+                            <i class='bx bx-lock-alt'></i> Password
+                        </label>
+                        <input type="password" id="password" name="password" required placeholder="Create a password" minlength="6">
+                        <span class="error-message" id="passwordError"></span>
+                        <small class="form-hint">Minimum 6 characters</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">
+                            <i class='bx bx-lock-alt'></i> Confirm Password
+                        </label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+
+                    <button type="submit" class="auth-btn" id="signupBtn">
+                        <span class="btn-text">Create Account</span>
+                        <span class="btn-loader" style="display: none;">
+                            <i class='bx bx-loader-alt bx-spin'></i> Creating...
+                        </span>
+                    </button>
+
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+                    </div>
+                </form>
+
+                <div id="message" class="message"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <p class="copyright">
+            &copy; 2025 Gym Management. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- Supabase JS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Supabase Config -->
+    <script src="js/supabase-config.js"></script>
+    <!-- Auth Functions -->
+    <script src="js/auth.js"></script>
+    <!-- Signup Script -->
+    <script src="js/signup.js"></script>
+
+</body>
+</html>

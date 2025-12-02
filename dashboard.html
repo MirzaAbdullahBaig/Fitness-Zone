@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <title>Dashboard - Fitness Zone</title>
+</head>
+<body>
+
+    <header>
+        <a href="dashboard.html" class="logo">Fitness <span>Zone</span></a>
+        <div class='bx bx-menu' id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">Attendance</a></li>
+            <li><a href="index.html#Membership">Membership</a></li>
+            <li><a href="index.html#review">Review</a></li>
+        </ul>
+        <div class="top-btn">
+            <a href="#" class="nav-btn" id="signoutBtn">Sign Out</a>
+        </div>
+    </header>
+
+    <section class="dashboard-section" id="home">
+        <div class="dashboard-container">
+            <div class="welcome-box">
+                <h1 class="dashboard-heading">Welcome to <span>Fitness Zone</span></h1>
+                <div class="user-info">
+                    <div class="info-card">
+                        <i class='bx bx-user-circle'></i>
+                        <div class="info-content">
+                            <h3>Profile Information</h3>
+                            <p><strong>Name:</strong> <span id="userName">Loading...</span></p>
+                            <p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
+                            <p><strong>Phone:</strong> <span id="userPhone">Loading...</span></p>
+                            <p><strong>Member Since:</strong> <span id="memberSince">Loading...</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-actions">
+                    <h2 class="section-heading">Quick <span>Actions</span></h2>
+                    <div class="action-cards">
+                        <a href="index.html#services" class="action-card">
+                            <i class='bx bx-dumbbell'></i>
+                            <h3>View Services</h3>
+                            <p>Explore our fitness services</p>
+                        </a>
+                        <a href="index.html#Membership" class="action-card">
+                            <i class='bx bx-card'></i>
+                            <h3>Memberships</h3>
+                            <p>Check membership plans</p>
+                        </a>
+                        <a href="index.html#about" class="action-card">
+                            <i class='bx bx-calendar-check'></i>
+                            <h3>Attendance</h3>
+                            <p>Mark your attendance</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="stats-section">
+                    <h2 class="section-heading">Your <span>Stats</span></h2>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <i class='bx bx-calendar'></i>
+                            <div class="stat-info">
+                                <h3>0</h3>
+                                <p>Days Active</p>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <i class='bx bx-body'></i>
+                            <div class="stat-info">
+                                <h3>0</h3>
+                                <p>Workouts</p>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <i class='bx bx-time'></i>
+                            <div class="stat-info">
+                                <h3>0h</h3>
+                                <p>Training Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <p class="copyright">
+            &copy; 2025 Gym Management. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- Supabase JS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Supabase Config -->
+    <script src="js/supabase-config.js"></script>
+    <!-- Auth Functions -->
+    <script src="js/auth.js"></script>
+    <!-- Dashboard Script -->
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>
